@@ -1,0 +1,26 @@
+How to calculate the address of an element in 2D array?
+There are two techniques to find the address of an element in 2D array:
+1. Row Major Order
+2. Column Major Order
+
+1. Row Major Order
+If am array is represented by arr[x][y] where x represents the rows and y represents the columns then the address of a random element arr[i][j] can be calculated as follows:
+
+Address of arr[i][j] = Base Address + (i * y + j) * size
+Here Base Address represents the address of element arr[0][0] (the first element of the array).
+
+Example: Given an array, arr[10][25] with base address 100 and the size of each element is 4 Bytes in memory. Find the address of arr[8][6] with the help of row-major order?
+
+Address of arr[8][6] = Base Address + (8*25 + 6)*4
+                     = 100 + (200+6)*4
+                     = 100+824 = 924
+2. Column Major Order
+If an array is represented by arr[x][y] where x represents the rows and y represents the columns then the address of a random element arr[i][j] using column major method, can be calculated as follows:
+
+Address of arr[i][j] = Base Address + (j * x + i) * size
+Example: Given an array, arr[20][20] with base address value 100 and the size of each element is 4 Bytes in memory. Find the address of arr[5][16] with the help of column-major order?
+
+Address of arr[5][16] = Base Address + (j * x + i) * size
+                     = 100 + (16*20+ 5)*4
+                     = 100+ 325*4
+                     = 100+ 1300 = 1400
